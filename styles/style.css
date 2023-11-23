@@ -202,6 +202,7 @@ body {
     background-color: rgba(8,145,178,255);
     display: flex;
     gap: 0.6rem;
+    margin-top: 3rem;
 }
 
 .footer-caption
@@ -215,8 +216,14 @@ body {
 
 .footer-caption-title
 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: 'Playfair', 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.footer-caption-title-desc
+{
+    font-size: 2rem;
 }
 
 .footer-caption-links {
@@ -245,13 +252,28 @@ body {
         display: grid;
         margin-bottom: 2.5vw;
     }
+    
+    .header-background
+    {
+        top: -12rem;
+        transform: translateX(-6rem) rotate(-18deg);
+    }
 
     .header-picture {
         display: none;
     }
 
     .header-desc {
-        margin: 7rem 2rem 5rem 3rem;
+        margin: 7rem 3rem 5rem 4rem;
+    }
+
+    .header-desc-title {
+        text-align: center;
+    }
+
+    .work-caption
+    {
+        margin-left: 1rem;
     }
 
     .header-desc-picture {
@@ -264,7 +286,7 @@ body {
         position: relative;
         top: -7rem;
         left: -0.5rem;
-        margin-left: -2rem;
+        margin-left: -1.5rem;
         margin-bottom: -7rem;
         box-shadow: 0.1rem 0.1rem 0.4rem rgb(0, 0, 0, 0.2);
     }
@@ -290,11 +312,79 @@ body {
 
     .work-container {
         display: grid;
+        padding-left: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+
+    .footer {
+        padding-left: 3rem;
     }
 
     .footer-caption
     {
         flex: 1 0 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header-background
+    {
+        top: -45rem;
+        transform: translateX(-13rem) rotate(-18deg);
+    }
+
+    .header-picture {
+        display: block;
+        z-index: 2;
+        background-image: url(images/picture.jpg);
+        background-size: cover;
+        width: 82%;
+        height: 25rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        box-shadow: 0.3rem 0.3rem 1.5rem rgb(0, 0, 0, 0.4);
+    }
+
+    .header-desc .header-desc-links
+    {
+        text-align: center;
+        font-size: 2.6rem;
+        margin-top: 0.5rem;
+    }
+
+    .header-desc {
+        margin-top: 1rem;
+        box-shadow: none;
+    }
+
+    .header-desc-picture {
+        display: none;
+    }
+
+    .footer
+    {
+        flex-direction: column;
+        width: 85%;
+    }
+
+    .footer-caption
+    {
+        width: 100%;
+        padding: 2.5rem 0rem;
+        overflow-wrap: break-word;
+    }
+
+    .footer-image {
+        background-image: url(images/working.jpg);
+        background-size: cover;
+        margin: 0;
+        min-width: 100%;
+        min-height: 25rem;
+        padding: 2.5rem 0rem;
     }
 }
